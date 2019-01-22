@@ -1,3 +1,21 @@
 <p>
-  main works!
+ Reports!!
 </p>
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <p>Auto-resizing sidenav</p>
+    </mat-drawer>
+    <mat-drawer-content>
+        <button type="button" mat-button (click)="drawer.toggle()">
+            Toggle sidenav
+        </button>
+
+        <div class="category-container">
+            <app-category *ngFor="let category of availablecategories" 
+            [categoryTitle]="category"
+            [reports]="initialReportsData[category]">
+            </app-category>
+        </div>
+    </mat-drawer-content>
+   
+</mat-drawer-container>

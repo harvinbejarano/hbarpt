@@ -3,9 +3,23 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'reporting',
     loadChildren : './reporting/reporting.module#ReportingModule'
+  },
+  {
+    path: 'orders',
+    loadChildren: './orders/orders.module#OrdersModule'
+  },
+  {
+    path: 'dashboard',
+    loadChildren:'./dashboard/dashboard.module#DashboardModule'
+  },
+  {
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full'
   }
+  
 ];
 
 @NgModule({
